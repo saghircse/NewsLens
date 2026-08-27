@@ -1,2 +1,4 @@
 gradio
 python-dotenv
+psycopg[binary]
+feedparser

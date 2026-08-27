@@ -1,0 +1,96 @@
+from database.connection import get_connection
+
+
+def get_latest_articles(limit=10):
+    query = """
+        select
+            articles.id,
+            articles.title,
+            articles.url,
+            articles.published_at,
+            sources.name as source_name
+        from articles
+        left join sources
+            on articles.source_id = sources.id
+        order by articles.published_at desc
+        limit %s;
+    """
+
+    with get_connection() as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(query, (limit,))
+            return cursor.fetchall()
+
+def article_exists(url):
+    query = """
+        select exists(
+            select 1
+            from articles
+            where url = %s
+        );
+    """
+
+    with get_connection() as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(query, (url,))
+            return cursor.fetchone()[0]        
+
+def get_active_sources():
+    query = """
+        select
+            id,
+            name,
+            feed_url
+        from sources
+        where active = true
+          and feed_url is not null
+        order by name;
+    """
+
+    with get_connection() as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(query)
+            return cursor.fetchall()   
+
+
+def insert_article(
+    source_id,
+    title,
+    url,
+    description=None,
+    author=None,
+    published_at=None,
+):
+    query = """
+        insert into articles (
+            source_id,
+            title,
+            url,
+            description,
+            author,
+            published_at
+        )
+        values (%s, %s, %s, %s, %s, %s)
+        on conflict (url) do nothing
+        returning id;
+    """
+
+    with get_connection() as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                query,
+                (
+                    source_id,
+                    title,
+                    url,
+                    description,
+                    author,
+                    published_at,
+                ),
+            )
+
+            result = cursor.fetchone()
+
+        connection.commit()
+
+    return result[0] if result else None             
