@@ -93,4 +93,90 @@ def insert_article(
 
         connection.commit()
 
-    return result[0] if result else None             
+    return result[0] if result else None           
+
+
+def get_articles_for_clustering(limit=100):
+    query = """
+        select
+            id,
+            title,
+            description,
+            source_id,
+            published_at
+        from articles
+        order by published_at desc nulls last
+        limit %s;
+    """
+
+    with get_connection() as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(query, (limit,))
+            return cursor.fetchall()
+
+
+def create_story(
+    title,
+    category=None,
+    first_seen_at=None,
+    last_updated_at=None,
+):
+    query = """
+        insert into stories (
+            title,
+            category,
+            first_seen_at,
+            last_updated_at
+        )
+        values (%s, %s, %s, %s)
+        returning id;
+    """
+
+    with get_connection() as connection:
+        with connection.cursor() as cursor:
+
+            cursor.execute(
+                query,
+                (
+                    title,
+                    category,
+                    first_seen_at,
+                    last_updated_at,
+                ),
+            )
+
+            story_id = cursor.fetchone()[0]
+
+        connection.commit()
+
+    return story_id        
+
+def link_article_to_story(
+    story_id,
+    article_id,
+    similarity_score=None,
+):
+    query = """
+        insert into story_articles (
+            story_id,
+            article_id,
+            similarity_score
+        )
+        values (%s, %s, %s)
+        on conflict (story_id, article_id)
+        do nothing;
+    """
+
+    with get_connection() as connection:
+        with connection.cursor() as cursor:
+
+            cursor.execute(
+                query,
+                (
+                    story_id,
+                    article_id,
+                    similarity_score,
+                ),
+            )
+
+        connection.commit()
