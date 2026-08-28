@@ -3,3 +3,5 @@ python-dotenv
 psycopg[binary]
 feedparser
 scikit-learn
+sentence-transformers
+numpy
