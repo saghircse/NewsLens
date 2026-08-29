@@ -1,0 +1,1072 @@
+ python -m scripts.evaluate_story_matching
+Loading articles...
+Loaded 46 articles.
+
+Loading stories...
+Loaded 3 stories.
+
+======================================================================
+NEWSLENS STORY MATCHING EVALUATOR
+======================================================================
+
+----------------------------------------------------------------------
+ARTICLE 62
+Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.913
+  Time:     0.799
+  Score:    0.896 🟢 HIGH
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.592
+  Time:     0.455
+  Score:    0.571 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.227
+  Time:     0.278
+  Score:    0.235 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 32
+Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.922
+  Time:     0.460
+  Score:    0.853 🟢 HIGH
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.621
+  Time:     0.804
+  Score:    0.648 🟡 POSSIBLE
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.240
+  Time:     0.283
+  Score:    0.246 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 42
+Trump signs order to rename Lake Ontario as Lake America amid Canada trade war – US politics live
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.552
+  Time:     0.289
+  Score:    0.513 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.209
+  Time:     0.809
+  Score:    0.299 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.219
+  Time:     0.465
+  Score:    0.256 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 43
+Florida grand jury finds DeSantis administration ‘misappropriated’ funds from Medicaid settlement
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.182
+  Time:     0.816
+  Score:    0.277 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.259
+  Time:     0.295
+  Score:    0.265 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.118
+  Time:     0.471
+  Score:    0.171 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 44
+Democrats to investigate ‘miraculous’ rise of Trump Jr’s investment firm
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.274
+  Time:     0.300
+  Score:    0.278 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.068
+  Time:     0.821
+  Score:    0.181 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.072
+  Time:     0.476
+  Score:    0.132 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 22
+Russia says UK ‘playing with fire’ amid reports CIA chief has warned Kremlin not to attack Nato
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.292
+  Time:     0.304
+  Score:    0.294 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.184
+  Time:     0.480
+  Score:    0.228 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.107
+  Time:     0.825
+  Score:    0.215 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 45
+Georgia senator Jon Ossoff slams racist posts allegedly from Republican opponent’s ex-staffer
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.157
+  Time:     0.829
+  Score:    0.258 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.243
+  Time:     0.308
+  Score:    0.253 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.142
+  Time:     0.485
+  Score:    0.194 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 46
+Actor Peter Cullen, voice of Optimus Prime and Eeyore, dies aged 85
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.152
+  Time:     0.835
+  Score:    0.254 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.110
+  Time:     0.490
+  Score:    0.167 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: -0.005
+  Time:     0.314
+  Score:    0.043 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 37
+Burnham accused of U-turn after initially backing political donations cap to fall below £500k
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.205
+  Time:     0.837
+  Score:    0.299 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.203
+  Time:     0.316
+  Score:    0.220 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.163
+  Time:     0.492
+  Score:    0.212 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 7
+Trump signs executive order to rename Lake Ontario as Lake America
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.343
+  Time:     0.318
+  Score:    0.340 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.206
+  Time:     0.495
+  Score:    0.249 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.104
+  Time:     0.839
+  Score:    0.214 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 33
+Climate crisis could be destabilising mountain areas like Nepal, experts warn
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.823
+  Time:     0.501
+  Score:    0.775 🟡 POSSIBLE
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.556
+  Time:     0.846
+  Score:    0.599 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.316
+  Time:     0.325
+  Score:    0.318 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 17
+Australian officials ‘working around the clock’ to check welfare of tourists missing in Nepal
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.953
+  Time:     0.848
+  Score:    0.937 🟢 HIGH
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.653
+  Time:     0.503
+  Score:    0.631 🟡 POSSIBLE
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.295
+  Time:     0.327
+  Score:    0.300 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 34
+Race to get aid into Nepal and Tibet amid warnings flood lake could burst
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.900
+  Time:     0.509
+  Score:    0.841 🟢 HIGH
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.615
+  Time:     0.853
+  Score:    0.651 🟡 POSSIBLE
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.271
+  Time:     0.332
+  Score:    0.280 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 35
+Search is on for at least 33 Britons missing after flash floods in Nepal and Tibet
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.899
+  Time:     0.509
+  Score:    0.841 🟢 HIGH
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.736
+  Time:     0.854
+  Score:    0.754 🟡 POSSIBLE
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.269
+  Time:     0.333
+  Score:    0.278 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 38
+Woman found guilty of indecent assault against two pupils at London boys’ school in 1980s
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.158
+  Time:     0.867
+  Score:    0.264 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.147
+  Time:     0.523
+  Score:    0.204 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.002
+  Time:     0.346
+  Score:    0.054 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 39
+Ex-Barclays boss denies having sex with woman dressed as Snow White after Epstein emails
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.174
+  Time:     0.868
+  Score:    0.278 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.225
+  Time:     0.347
+  Score:    0.244 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.127
+  Time:     0.524
+  Score:    0.187 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 23
+Greek Orthodox priest and cult musician clarifies views on homosexuality
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: -0.046
+  Time:     0.871
+  Score:    0.092 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: -0.038
+  Time:     0.527
+  Score:    0.047 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: -0.039
+  Time:     0.350
+  Score:    0.019 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 40
+Teesside MPs call for more police help after Middlesbrough and A66 deaths
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.325
+  Time:     0.880
+  Score:    0.408 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.269
+  Time:     0.536
+  Score:    0.309 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.088
+  Time:     0.359
+  Score:    0.129 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 24
+Ratko Mladić, the ‘Butcher of Bosnia’, dies in The Hague
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.165
+  Time:     0.892
+  Score:    0.274 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.090
+  Time:     0.547
+  Score:    0.159 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.093
+  Time:     0.371
+  Score:    0.134 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 25
+Bronze age treasure stolen in four-minute Spanish museum heist
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.153
+  Time:     0.556
+  Score:    0.213 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.153
+  Time:     0.380
+  Score:    0.187 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.049
+  Time:     0.900
+  Score:    0.177 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 41
+Homes damaged as storms follow heatwaves in England and Wales
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.465
+  Time:     0.558
+  Score:    0.479 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.399
+  Time:     0.903
+  Score:    0.475 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.082
+  Time:     0.382
+  Score:    0.127 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 26
+Officials urge calm after malaria outbreak kills two staff at Frankfurt airport
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.275
+  Time:     0.909
+  Score:    0.370 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.324
+  Time:     0.564
+  Score:    0.360 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.147
+  Time:     0.388
+  Score:    0.183 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 12
+USS Abraham Lincoln to visit port in Thailand after more than 250 days at sea
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.259
+  Time:     0.915
+  Score:    0.357 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.254
+  Time:     0.570
+  Score:    0.301 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.262
+  Time:     0.394
+  Score:    0.282 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 18
+One Nation’s immigration policy is clear as mud – but that ambiguity could be a secret weapon for Pauline Hanson
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.409
+  Time:     0.917
+  Score:    0.485 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.402
+  Time:     0.396
+  Score:    0.401 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.247
+  Time:     0.572
+  Score:    0.295 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 13
+Nearly 1,400 missing, mostly tourists, after Nepal-Tibet flash flood kills at least 356
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.901
+  Time:     0.621
+  Score:    0.859 🟢 HIGH
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.708
+  Time:     0.965
+  Score:    0.746 🟡 POSSIBLE
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.236
+  Time:     0.444
+  Score:    0.267 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 19
+Queensland concedes law imposing mandatory jail on some offenders as young as 10 breaches human rights
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.383
+  Time:     0.989
+  Score:    0.473 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.211
+  Time:     0.644
+  Score:    0.276 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.108
+  Time:     0.468
+  Score:    0.162 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 20
+Nepal floods: children as young as 11 among 39 Australians missing after disaster
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.893
+  Time:     1.000
+  Score:    0.909 🟢 HIGH
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.774
+  Time:     0.656
+  Score:    0.756 🟡 POSSIBLE
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.317
+  Time:     0.479
+  Score:    0.341 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 21
+Albanese vows refugee intake won’t be slashed after earlier reports of Coalition-level cut
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.679
+  Time:     0.940
+  Score:    0.718 🟡 POSSIBLE
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.412
+  Time:     0.716
+  Score:    0.458 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.386
+  Time:     0.539
+  Score:    0.409 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 2
+UK urged to help free British-Egyptian ‘arrested in Cairo over sister’s activism’
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.257
+  Time:     0.937
+  Score:    0.359 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.188
+  Time:     0.718
+  Score:    0.268 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.064
+  Time:     0.542
+  Score:    0.135 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 14
+Yayoi Kusama, Japanese artist who became a global superstar, dies aged 97
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.086
+  Time:     0.837
+  Score:    0.199 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.064
+  Time:     0.818
+  Score:    0.177 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: -0.026
+  Time:     0.661
+  Score:    0.077 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 15
+Girl, 13, among missing British citizens after flash flood in Nepal
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.866
+  Time:     0.985
+  Score:    0.884 🟢 HIGH
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.685
+  Time:     0.671
+  Score:    0.683 🟡 POSSIBLE
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.174
+  Time:     0.808
+  Score:    0.269 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 16
+Flash floods on Nepal-Tibet border leave scores dead and hundreds missing
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.903
+  Time:     1.000
+  Score:    0.918 🟢 HIGH
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.627
+  Time:     0.656
+  Score:    0.632 🟡 POSSIBLE
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.167
+  Time:     0.824
+  Score:    0.266 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 8
+How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.911
+  Time:     0.828
+  Score:    0.898 🟢 HIGH
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.304
+  Time:     0.995
+  Score:    0.407 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.342
+  Time:     0.651
+  Score:    0.388 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 3
+South African police arrest two Thai men for allegedly smuggling parrot eggs
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.262
+  Time:     0.587
+  Score:    0.310 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.185
+  Time:     0.931
+  Score:    0.297 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.078
+  Time:     0.893
+  Score:    0.200 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 4
+Mpox is back – and in new countries. How can this outbreak be contained?
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.347
+  Time:     0.500
+  Score:    0.370 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.284
+  Time:     0.844
+  Score:    0.368 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.183
+  Time:     0.979
+  Score:    0.303 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 27
+On scraps of land and under constant threat, Gaza farmers struggle to survive
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.354
+  Time:     0.844
+  Score:    0.427 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.252
+  Time:     0.979
+  Score:    0.361 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.328
+  Time:     0.500
+  Score:    0.353 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 9
+Wiped out: US faces surging toilet paper prices amid trade war with Canada
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.911
+  Time:     1.000
+  Score:    0.924 🟢 HIGH
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.187
+  Time:     0.824
+  Score:    0.282 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.212
+  Time:     0.479
+  Score:    0.252 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 5
+Moringa lattes and tigernut kebabs: the Ghanaians ‘taking back the power’ of their food
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.119
+  Time:     0.979
+  Score:    0.248 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.109
+  Time:     0.458
+  Score:    0.162 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.020
+  Time:     0.803
+  Score:    0.138 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 36
+At least 14 newborn babies die in fire at Pakistan hospital’s maternity ward
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.357
+  Time:     0.763
+  Score:    0.418 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.356
+  Time:     0.418
+  Score:    0.365 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.090
+  Time:     0.939
+  Score:    0.217 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 28
+Iran seeks to criminalise all contact with foreign media in ‘chilling’ crackdown
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.261
+  Time:     0.896
+  Score:    0.356 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.251
+  Time:     0.719
+  Score:    0.321 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.270
+  Time:     0.375
+  Score:    0.286 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 29
+Iran faces strait of Hormuz paradox as strategic value of chokehold erodes
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.393
+  Time:     0.875
+  Score:    0.465 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.112
+  Time:     0.699
+  Score:    0.200 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.094
+  Time:     0.354
+  Score:    0.133 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 10
+Wife of US soldier deported after Trump rollback on military family protections
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.253
+  Time:     0.196
+  Score:    0.244 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.173
+  Time:     0.540
+  Score:    0.228 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.139
+  Time:     0.716
+  Score:    0.225 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 11
+At least 47 killed and dozens kidnapped in gang attack near Haiti capital
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.355
+  Time:     0.481
+  Score:    0.374 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.378
+  Time:     0.137
+  Score:    0.342 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.178
+  Time:     0.658
+  Score:    0.250 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 30
+US threatens severe sanctions against countries with economic ties to Iran
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.450
+  Time:     0.187
+  Score:    0.411 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.224
+  Time:     0.010
+  Score:    0.192 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.217
+  Time:     0.000
+  Score:    0.184 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 6
+Prince Harry quits board of wildlife charity after rangers’ human rights abuses
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.290
+  Time:     0.000
+  Score:    0.246 ⚪ LOW
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.261
+  Time:     0.158
+  Score:    0.246 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.287
+  Time:     0.000
+  Score:    0.244 ⚪ LOW
+
+
+----------------------------------------------------------------------
+ARTICLE 31
+Iran vows to retaliate against countries that cooperate with fresh US sanctions
+
+Story 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic: 0.460
+  Time:     0.039
+  Score:    0.397 ⚪ LOW
+
+Story 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic: 0.193
+  Time:     0.000
+  Score:    0.164 ⚪ LOW
+
+Story 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic: 0.127
+  Time:     0.000
+  Score:    0.108 ⚪ LOW
+
+
+======================================================================
+Evaluation complete.
+======================================================================
