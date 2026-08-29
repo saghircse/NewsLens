@@ -1,6 +1,7 @@
 import spacy
 
 from nlp.cleaning import clean_text
+from nlp.entity_normalization import canonicalize_entity
 
 
 MODEL_NAME = "en_core_web_sm"
@@ -39,7 +40,6 @@ def extract_entities(text):
     if not text:
         return []
 
-    # Clean HTML, URLs, whitespace, etc.
     text = clean_text(text)
 
     if not text:
@@ -61,9 +61,18 @@ def extract_entities(text):
         if not entity_text:
             continue
 
+        normalized = canonicalize_entity(
+            entity_text,
+            entity.label_,
+        )
+
+        if not normalized:
+            continue
+
         entities.append({
             "text": entity_text,
             "label": entity.label_,
+            "normalized": normalized,
         })
 
     return entities
@@ -71,14 +80,7 @@ def extract_entities(text):
 
 def normalize_entity(text):
 
-    text = clean_text(text)
-
-    return (
-        text
-        .lower()
-        .strip()
-        .replace("'s", "")
-    )
+    return canonicalize_entity(text)
 
 
 def extract_normalized_entities(text):
@@ -86,7 +88,7 @@ def extract_normalized_entities(text):
     entities = extract_entities(text)
 
     return {
-        normalize_entity(entity["text"])
+        entity["normalized"]
         for entity in entities
-        if normalize_entity(entity["text"])
+        if entity["normalized"]
     }

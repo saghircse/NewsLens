@@ -1,30 +1,35 @@
-import spacy
-
-
-MODEL_NAME = "en_core_web_sm"
+from nlp.entities import extract_entities
 
 
 def main():
 
-    print("Loading spaCy model...")
-
-    nlp = spacy.load(MODEL_NAME)
-
     text = """
-    India approves a major semiconductor investment
-    involving Tata Electronics and the government.
+    Donald Trump's government announced a new policy
+    involving the United States and Canada.
+
+    Canadian companies and American investors are watching
+    the announcement closely.
     """
 
-    doc = nlp(text)
+    print("\n========== ENTITY EXTRACTION TEST ==========\n")
 
-    print("\nEntities:")
+    entities = extract_entities(text)
 
-    for entity in doc.ents:
+    for entity in entities:
+
         print(
-            f"{entity.text} "
-            f"→ {entity.label_}"
+            f"Text:       {entity['text']}"
         )
 
+        print(
+            f"Label:      {entity['label']}"
+        )
+
+        print(
+            f"Normalized: {entity['normalized']}"
+        )
+
+        print()
 
 
 if __name__ == "__main__":
