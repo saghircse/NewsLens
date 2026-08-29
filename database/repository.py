@@ -216,3 +216,28 @@ def get_articles_with_embeddings(limit=100):
         with connection.cursor() as cursor:
             cursor.execute(query, (limit,))
             return cursor.fetchall()        
+
+def update_story_embedding(
+    story_id,
+    embedding,
+):
+
+    query = """
+        update stories
+        set embedding = %s
+        where id = %s;
+    """
+
+    with get_connection() as connection:
+
+        with connection.cursor() as cursor:
+
+            cursor.execute(
+                query,
+                (
+                    embedding.tolist(),
+                    story_id,
+                ),
+            )
+
+        connection.commit()
