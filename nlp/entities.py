@@ -1,5 +1,7 @@
 import spacy
 
+from nlp.cleaning import clean_text
+
 
 MODEL_NAME = "en_core_web_sm"
 
@@ -37,6 +39,12 @@ def extract_entities(text):
     if not text:
         return []
 
+    # Clean HTML, URLs, whitespace, etc.
+    text = clean_text(text)
+
+    if not text:
+        return []
+
     nlp = get_nlp()
 
     doc = nlp(text)
@@ -63,6 +71,8 @@ def extract_entities(text):
 
 def normalize_entity(text):
 
+    text = clean_text(text)
+
     return (
         text
         .lower()
@@ -78,4 +88,5 @@ def extract_normalized_entities(text):
     return {
         normalize_entity(entity["text"])
         for entity in entities
+        if normalize_entity(entity["text"])
     }
