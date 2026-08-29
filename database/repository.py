@@ -180,3 +180,39 @@ def link_article_to_story(
             )
 
         connection.commit()
+
+def update_article_embedding(article_id, embedding):
+    query = """
+        update articles
+        set embedding = %s
+        where id = %s;
+    """
+
+    with get_connection() as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                query,
+                (embedding.tolist(), article_id),
+            )
+
+        connection.commit()
+
+def get_articles_with_embeddings(limit=100):
+    query = """
+        select
+            id,
+            title,
+            description,
+            source_id,
+            published_at,
+            embedding
+        from articles
+        where embedding is not null
+        order by published_at desc nulls last
+        limit %s;
+    """
+
+    with get_connection() as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(query, (limit,))
+            return cursor.fetchall()        
