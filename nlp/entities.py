@@ -6,6 +6,20 @@ MODEL_NAME = "en_core_web_sm"
 _nlp = None
 
 
+# Entity types that are particularly useful for NewsLens.
+USEFUL_ENTITY_TYPES = {
+    "PERSON",
+    "ORG",
+    "GPE",
+    "LOC",
+    "FAC",
+    "EVENT",
+    "NORP",
+    "PRODUCT",
+    "WORK_OF_ART",
+}
+
+
 def get_nlp():
 
     global _nlp
@@ -20,6 +34,9 @@ def get_nlp():
 
 def extract_entities(text):
 
+    if not text:
+        return []
+
     nlp = get_nlp()
 
     doc = nlp(text)
@@ -28,12 +45,21 @@ def extract_entities(text):
 
     for entity in doc.ents:
 
+        if entity.label_ not in USEFUL_ENTITY_TYPES:
+            continue
+
+        entity_text = entity.text.strip()
+
+        if not entity_text:
+            continue
+
         entities.append({
-            "text": entity.text,
+            "text": entity_text,
             "label": entity.label_,
         })
 
     return entities
+
 
 def normalize_entity(text):
 
@@ -43,6 +69,7 @@ def normalize_entity(text):
         .strip()
         .replace("'s", "")
     )
+
 
 def extract_normalized_entities(text):
 
