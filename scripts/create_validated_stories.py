@@ -1,3 +1,4 @@
+import argparse
 import json
 from pathlib import Path
 
@@ -68,6 +69,25 @@ def get_existing_article_ids(
         }
 
 
+def get_existing_article_database_ids(
+    connection,
+):
+
+    query = """
+        SELECT id
+        FROM articles
+    """
+
+    with connection.cursor() as cursor:
+
+        cursor.execute(query)
+
+        return {
+            row[0]
+            for row in cursor.fetchall()
+        }
+
+
 def insert_story(
     connection,
     candidate,
@@ -109,7 +129,6 @@ def insert_story_articles(
     connection,
     story_id,
     article_ids,
-    similarity_score,
 ):
 
     query = """
@@ -129,7 +148,7 @@ def insert_story_articles(
         (
             story_id,
             article_id,
-            similarity_score,
+            None,
         )
         for article_id in article_ids
     ]
@@ -149,6 +168,7 @@ def insert_story_articles(
 def validate_candidate(
     candidate,
     existing_article_ids,
+    existing_article_database_ids,
 ):
 
     errors = []
@@ -207,6 +227,23 @@ def validate_candidate(
         )
 
     # --------------------------------------------------------
+    # Article existence
+    # --------------------------------------------------------
+
+    missing_articles = [
+        article_id
+        for article_id in article_ids
+        if article_id not in existing_article_database_ids
+    ]
+
+    if missing_articles:
+
+        errors.append(
+            f"articles do not exist in database: "
+            f"{missing_articles}"
+        )
+
+    # --------------------------------------------------------
     # Cluster score
     # --------------------------------------------------------
 
@@ -254,6 +291,21 @@ def validate_candidate(
 
 def main():
 
+    parser = argparse.ArgumentParser(
+        description=(
+            "Create NewsLens stories from validated "
+            "new-story candidates."
+        )
+    )
+
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Validate candidates without changing the database.",
+    )
+
+    args = parser.parse_args()
+
     print(
         "============================================================"
     )
@@ -264,6 +316,10 @@ def main():
 
     print(
         "============================================================"
+    )
+
+    print(
+        f"\nMode: {'DRY RUN' if args.dry_run else 'LIVE'}"
     )
 
     print(
@@ -301,6 +357,17 @@ def main():
         print(
             f"Found {len(existing_article_ids)} "
             f"already-mapped articles."
+        )
+
+        existing_article_database_ids = (
+            get_existing_article_database_ids(
+                connection
+            )
+        )
+
+        print(
+            f"Found {len(existing_article_database_ids)} "
+            f"articles in database."
         )
 
         created_stories = []
@@ -350,9 +417,17 @@ def main():
                 f"Articles: {len(article_ids)}"
             )
 
-            print(
-                f"Cluster score: {float(score):.3f}"
-            )
+            try:
+
+                print(
+                    f"Cluster score: {float(score):.3f}"
+                )
+
+            except (TypeError, ValueError):
+
+                print(
+                    "Cluster score: INVALID"
+                )
 
             # ------------------------------------------------
             # Validate again immediately before INSERT.
@@ -361,6 +436,7 @@ def main():
             errors = validate_candidate(
                 candidate,
                 existing_article_ids,
+                existing_article_database_ids,
             )
 
             if errors:
@@ -382,6 +458,27 @@ def main():
                 continue
 
             # ------------------------------------------------
+            # Dry run
+            # ------------------------------------------------
+
+            if args.dry_run:
+
+                print(
+                    "\nSTATUS: VALID — WOULD CREATE"
+                )
+
+                print(
+                    f"  Would create story with "
+                    f"{len(article_ids)} articles."
+                )
+
+                print(
+                    f"  Article IDs: {article_ids}"
+                )
+
+                continue
+
+            # ------------------------------------------------
             # Create story
             # ------------------------------------------------
 
@@ -398,15 +495,10 @@ def main():
             # Create story/article mappings
             # ------------------------------------------------
 
-            similarity_score = float(
-                candidate["cluster_score"]
-            )
-
             insert_story_articles(
                 connection,
                 story_id,
                 article_ids,
-                similarity_score,
             )
 
             print(
@@ -435,7 +527,13 @@ def main():
         # Commit transaction
         # ----------------------------------------------------
 
-        connection.commit()
+        if args.dry_run:
+
+            connection.rollback()
+
+        else:
+
+            connection.commit()
 
     # ========================================================
     # Summary
@@ -497,7 +595,7 @@ def main():
             )
 
     print(
-        "\nStage 7.13 complete."
+        "\nStage 7.17 complete."
     )
 
 

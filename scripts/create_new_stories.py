@@ -149,6 +149,130 @@ def calculate_similarity_matrix(articles):
 
     return valid_articles, similarity_matrix
 
+# ============================================================
+# Similarity diagnostics
+# ============================================================
+
+def print_similarity_diagnostics(
+    articles,
+    similarity_matrix,
+    top_n=20,
+):
+    """
+    Show the strongest article-to-article relationships.
+
+    This is diagnostic only. It does not change candidate
+    generation or database state.
+    """
+
+    if len(articles) < 2:
+        print(
+            "\nNot enough articles for similarity diagnostics."
+        )
+        return
+
+    pairs = []
+
+    for i, j in combinations(
+        range(len(articles)),
+        2,
+    ):
+        semantic_score = float(
+            similarity_matrix[i][j]
+        )
+
+        score = relationship_score(
+            articles[i],
+            articles[j],
+            semantic_score,
+        )
+
+        pairs.append(
+            (
+                score,
+                semantic_score,
+                i,
+                j,
+            )
+        )
+
+    pairs.sort(
+        key=lambda item: item[0],
+        reverse=True,
+    )
+
+    print(
+        "\n============================================================"
+    )
+
+    print(
+        "SIMILARITY DIAGNOSTICS"
+    )
+
+    print(
+        "============================================================"
+    )
+
+    print(
+        f"Articles analyzed: {len(articles)}"
+    )
+
+    print(
+        f"Candidate graph threshold: "
+        f"{PAIR_SIMILARITY_THRESHOLD:.2f}"
+    )
+
+    print(
+        f"Total article pairs: {len(pairs)}"
+    )
+
+    print(
+        "\nTop article relationships:"
+    )
+
+    for rank, (
+        score,
+        semantic_score,
+        i,
+        j,
+    ) in enumerate(
+        pairs[:top_n],
+        start=1,
+    ):
+
+        article_a = articles[i]
+        article_b = articles[j]
+
+        overlap = entity_overlap(
+            article_a,
+            article_b,
+        )
+
+        print(
+            f"\n[{rank}] Relationship: {score:.4f}"
+        )
+
+        print(
+            f"    Semantic: {semantic_score:.4f}"
+        )
+
+        print(
+            f"    Entity:   {overlap:.4f}"
+        )
+
+        print(
+            f"    Article {article_a['id']}: "
+            f"{article_a['title']}"
+        )
+
+        print(
+            f"    Article {article_b['id']}: "
+            f"{article_b['title']}"
+        )
+
+    print(
+        "\n============================================================"
+    )
 
 # ============================================================
 # Entity extraction
@@ -573,6 +697,11 @@ def generate_candidates(articles):
 
     if not articles:
         return []
+
+    print_similarity_diagnostics(
+        articles,
+        similarity_matrix,
+    )
 
     article_index = {
         article["id"]: index
