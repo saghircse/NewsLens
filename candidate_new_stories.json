@@ -1,0 +1,58 @@
+{
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "title": "Australian officials ‘working around the clock’ to check welfare of tourists missing in Nepal",
+      "article_ids": [
+        13,
+        15,
+        16,
+        17,
+        20,
+        33,
+        34,
+        35
+      ],
+      "article_titles": [
+        "Nearly 1,400 missing, mostly tourists, after Nepal-Tibet flash flood kills at least 356",
+        "Girl, 13, among missing British citizens after flash flood in Nepal",
+        "Flash floods on Nepal-Tibet border leave scores dead and hundreds missing",
+        "Australian officials ‘working around the clock’ to check welfare of tourists missing in Nepal",
+        "Nepal floods: children as young as 11 among 39 Australians missing after disaster",
+        "Climate crisis could be destabilising mountain areas like Nepal, experts warn",
+        "Race to get aid into Nepal and Tibet amid warnings flood lake could burst",
+        "Search is on for at least 33 Britons missing after flash floods in Nepal and Tibet"
+      ],
+      "article_count": 8,
+      "cluster_score": 0.724
+    },
+    {
+      "title": "Iran vows to retaliate against countries that cooperate with fresh US sanctions",
+      "article_ids": [
+        29,
+        30,
+        31
+      ],
+      "article_titles": [
+        "Iran faces strait of Hormuz paradox as strategic value of chokehold erodes",
+        "US threatens severe sanctions against countries with economic ties to Iran",
+        "Iran vows to retaliate against countries that cooperate with fresh US sanctions"
+      ],
+      "article_count": 3,
+      "cluster_score": 0.695
+    },
+    {
+      "title": "Trump signs order to rename Lake Ontario as Lake America amid Canada trade war – US politics live",
+      "article_ids": [
+        7,
+        42
+      ],
+      "article_titles": [
+        "Trump signs executive order to rename Lake Ontario as Lake America",
+        "Trump signs order to rename Lake Ontario as Lake America amid Canada trade war – US politics live"
+      ],
+      "article_count": 2,
+      "cluster_score": 0.626
+    }
+  ]
+}
