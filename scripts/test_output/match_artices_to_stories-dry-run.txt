@@ -1,0 +1,584 @@
+python -m scripts.match_articles_to_stories --dry-run
+
+======================================================================
+NEWSLENS STORY-ARTICLE MATCHING
+======================================================================
+
+Loading articles...
+Loaded 46 articles.
+
+Loading stories...
+Loaded 3 stories.
+
+Preparing story entities...
+Loading spaCy model...
+spaCy model loaded.
+Story entities prepared.
+
+Matching articles to stories...
+Semantic weight: 0.75
+Entity weight:   0.25
+Match threshold: 0.70
+
+[1/46]
+
+----------------------------------------------------------------------
+Article 2: UK urged to help free British-Egyptian ‘arrested in Cairo over sister’s activism’
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.2570
+  Entity similarity:   0.0000
+  Combined score:      0.1928
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[2/46]
+
+----------------------------------------------------------------------
+Article 3: South African police arrest two Thai men for allegedly smuggling parrot eggs
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.2615
+  Entity similarity:   0.0000
+  Combined score:      0.1962
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[3/46]
+
+----------------------------------------------------------------------
+Article 4: Mpox is back – and in new countries. How can this outbreak be contained?
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.3469
+  Entity similarity:   0.0000
+  Combined score:      0.2601
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[4/46]
+
+----------------------------------------------------------------------
+Article 5: Moringa lattes and tigernut kebabs: the Ghanaians ‘taking back the power’ of their food
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.1191
+  Entity similarity:   0.0000
+  Combined score:      0.0893
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[5/46]
+
+----------------------------------------------------------------------
+Article 6: Prince Harry quits board of wildlife charity after rangers’ human rights abuses
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.2899
+  Entity similarity:   0.0000
+  Combined score:      0.2174
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[6/46]
+
+----------------------------------------------------------------------
+Article 7: Trump signs executive order to rename Lake Ontario as Lake America
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.3434
+  Entity similarity:   0.2857
+  Combined score:      0.3289
+  Shared entities:     ['canada', 'trump']
+  Decision: NO MATCH (< 0.55)
+
+[7/46]
+
+----------------------------------------------------------------------
+Article 8: How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.9106
+  Entity similarity:   0.2222
+  Combined score:      0.7385
+  Shared entities:     ['canada', 'trump']
+  Decision: MATCH (>= 0.70)
+
+[8/46]
+
+----------------------------------------------------------------------
+Article 9: Wiped out: US faces surging toilet paper prices amid trade war with Canada
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.9106
+  Entity similarity:   0.1250
+  Combined score:      0.7142
+  Shared entities:     ['canada']
+  Decision: MATCH (>= 0.70)
+
+[9/46]
+
+----------------------------------------------------------------------
+Article 10: Wife of US soldier deported after Trump rollback on military family protections
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.2528
+  Entity similarity:   0.0000
+  Combined score:      0.1896
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[10/46]
+
+----------------------------------------------------------------------
+Article 11: At least 47 killed and dozens kidnapped in gang attack near Haiti capital
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.3776
+  Entity similarity:   0.0000
+  Combined score:      0.2832
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[11/46]
+
+----------------------------------------------------------------------
+Article 12: USS Abraham Lincoln to visit port in Thailand after more than 250 days at sea
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.2624
+  Entity similarity:   0.0000
+  Combined score:      0.1968
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[12/46]
+
+----------------------------------------------------------------------
+Article 13: Nearly 1,400 missing, mostly tourists, after Nepal-Tibet flash flood kills at least 356
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.9007
+  Entity similarity:   0.0000
+  Combined score:      0.6755
+  Shared entities:     none
+  Decision: POSSIBLE (>= 0.55)
+
+[13/46]
+
+----------------------------------------------------------------------
+Article 14: Yayoi Kusama, Japanese artist who became a global superstar, dies aged 97
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.0859
+  Entity similarity:   0.0000
+  Combined score:      0.0644
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[14/46]
+
+----------------------------------------------------------------------
+Article 15: Girl, 13, among missing British citizens after flash flood in Nepal
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.8661
+  Entity similarity:   0.0000
+  Combined score:      0.6496
+  Shared entities:     none
+  Decision: POSSIBLE (>= 0.55)
+
+[15/46]
+
+----------------------------------------------------------------------
+Article 16: Flash floods on Nepal-Tibet border leave scores dead and hundreds missing
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.9032
+  Entity similarity:   0.0000
+  Combined score:      0.6774
+  Shared entities:     none
+  Decision: POSSIBLE (>= 0.55)
+
+[16/46]
+
+----------------------------------------------------------------------
+Article 17: Australian officials ‘working around the clock’ to check welfare of tourists missing in Nepal
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.9532
+  Entity similarity:   0.2000
+  Combined score:      0.7649
+  Shared entities:     ['australians', 'nepal']
+  Decision: MATCH (>= 0.70)
+
+[17/46]
+
+----------------------------------------------------------------------
+Article 18: One Nation’s immigration policy is clear as mud – but that ambiguity could be a secret weapon for Pauline Hanson
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.4094
+  Entity similarity:   0.0000
+  Combined score:      0.3070
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[18/46]
+
+----------------------------------------------------------------------
+Article 19: Queensland concedes law imposing mandatory jail on some offenders as young as 10 breaches human rights
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.3826
+  Entity similarity:   0.0000
+  Combined score:      0.2869
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[19/46]
+
+----------------------------------------------------------------------
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.8926
+  Entity similarity:   0.2000
+  Combined score:      0.7195
+  Shared entities:     ['australians', 'nepal']
+  Decision: MATCH (>= 0.70)
+
+[20/46]
+
+----------------------------------------------------------------------
+Article 21: Albanese vows refugee intake won’t be slashed after earlier reports of Coalition-level cut
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.6787
+  Entity similarity:   0.1429
+  Combined score:      0.5448
+  Shared entities:     ['australia']
+  Decision: NO MATCH (< 0.55)
+
+[21/46]
+
+----------------------------------------------------------------------
+Article 22: Russia says UK ‘playing with fire’ amid reports CIA chief has warned Kremlin not to attack Nato
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.2919
+  Entity similarity:   0.0000
+  Combined score:      0.2189
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[22/46]
+
+----------------------------------------------------------------------
+Article 23: Greek Orthodox priest and cult musician clarifies views on homosexuality
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: -0.0381
+  Entity similarity:   0.0000
+  Combined score:      -0.0286
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[23/46]
+
+----------------------------------------------------------------------
+Article 24: Ratko Mladić, the ‘Butcher of Bosnia’, dies in The Hague
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.1649
+  Entity similarity:   0.0000
+  Combined score:      0.1237
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[24/46]
+
+----------------------------------------------------------------------
+Article 25: Bronze age treasure stolen in four-minute Spanish museum heist
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.1533
+  Entity similarity:   0.0000
+  Combined score:      0.1150
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[25/46]
+
+----------------------------------------------------------------------
+Article 26: Officials urge calm after malaria outbreak kills two staff at Frankfurt airport
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.3237
+  Entity similarity:   0.0000
+  Combined score:      0.2428
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[26/46]
+
+----------------------------------------------------------------------
+Article 27: On scraps of land and under constant threat, Gaza farmers struggle to survive
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.3535
+  Entity similarity:   0.0000
+  Combined score:      0.2651
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[27/46]
+
+----------------------------------------------------------------------
+Article 28: Iran seeks to criminalise all contact with foreign media in ‘chilling’ crackdown
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.2700
+  Entity similarity:   0.0000
+  Combined score:      0.2025
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[28/46]
+
+----------------------------------------------------------------------
+Article 29: Iran faces strait of Hormuz paradox as strategic value of chokehold erodes
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.3926
+  Entity similarity:   0.0000
+  Combined score:      0.2945
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[29/46]
+
+----------------------------------------------------------------------
+Article 30: US threatens severe sanctions against countries with economic ties to Iran
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.4501
+  Entity similarity:   0.1429
+  Combined score:      0.3733
+  Shared entities:     ['trump']
+  Decision: NO MATCH (< 0.55)
+
+[30/46]
+
+----------------------------------------------------------------------
+Article 31: Iran vows to retaliate against countries that cooperate with fresh US sanctions
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.4598
+  Entity similarity:   0.0000
+  Combined score:      0.3448
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[31/46]
+
+----------------------------------------------------------------------
+Article 32: Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.9220
+  Entity similarity:   0.0000
+  Combined score:      0.6915
+  Shared entities:     none
+  Decision: POSSIBLE (>= 0.55)
+
+[32/46]
+
+----------------------------------------------------------------------
+Article 33: Climate crisis could be destabilising mountain areas like Nepal, experts warn
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.8235
+  Entity similarity:   0.0000
+  Combined score:      0.6176
+  Shared entities:     none
+  Decision: POSSIBLE (>= 0.55)
+
+[33/46]
+
+----------------------------------------------------------------------
+Article 34: Race to get aid into Nepal and Tibet amid warnings flood lake could burst
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.9000
+  Entity similarity:   0.0000
+  Combined score:      0.6750
+  Shared entities:     none
+  Decision: POSSIBLE (>= 0.55)
+
+[34/46]
+
+----------------------------------------------------------------------
+Article 35: Search is on for at least 33 Britons missing after flash floods in Nepal and Tibet
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.8993
+  Entity similarity:   0.0000
+  Combined score:      0.6745
+  Shared entities:     none
+  Decision: POSSIBLE (>= 0.55)
+
+[35/46]
+
+----------------------------------------------------------------------
+Article 36: At least 14 newborn babies die in fire at Pakistan hospital’s maternity ward
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.3574
+  Entity similarity:   0.0000
+  Combined score:      0.2681
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[36/46]
+
+----------------------------------------------------------------------
+Article 37: Burnham accused of U-turn after initially backing political donations cap to fall below £500k
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.2047
+  Entity similarity:   0.0000
+  Combined score:      0.1535
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[37/46]
+
+----------------------------------------------------------------------
+Article 38: Woman found guilty of indecent assault against two pupils at London boys’ school in 1980s
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.1578
+  Entity similarity:   0.0000
+  Combined score:      0.1184
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[38/46]
+
+----------------------------------------------------------------------
+Article 39: Ex-Barclays boss denies having sex with woman dressed as Snow White after Epstein emails
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.2255
+  Entity similarity:   0.0000
+  Combined score:      0.1691
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[39/46]
+
+----------------------------------------------------------------------
+Article 40: Teesside MPs call for more police help after Middlesbrough and A66 deaths
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.3250
+  Entity similarity:   0.0000
+  Combined score:      0.2437
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[40/46]
+
+----------------------------------------------------------------------
+Article 41: Homes damaged as storms follow heatwaves in England and Wales
+Best story: 2
+  Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+  Semantic similarity: 0.4645
+  Entity similarity:   0.0000
+  Combined score:      0.3484
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[41/46]
+
+----------------------------------------------------------------------
+Article 42: Trump signs order to rename Lake Ontario as Lake America amid Canada trade war – US politics live
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.5522
+  Entity similarity:   0.0870
+  Combined score:      0.4359
+  Shared entities:     ['canada', 'trump']
+  Decision: NO MATCH (< 0.55)
+
+[42/46]
+
+----------------------------------------------------------------------
+Article 43: Florida grand jury finds DeSantis administration ‘misappropriated’ funds from Medicaid settlement
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.2593
+  Entity similarity:   0.0000
+  Combined score:      0.1945
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[43/46]
+
+----------------------------------------------------------------------
+Article 44: Democrats to investigate ‘miraculous’ rise of Trump Jr’s investment firm
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.2742
+  Entity similarity:   0.0000
+  Combined score:      0.2057
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[44/46]
+
+----------------------------------------------------------------------
+Article 45: Georgia senator Jon Ossoff slams racist posts allegedly from Republican opponent’s ex-staffer
+Best story: 3
+  How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+  Semantic similarity: 0.2435
+  Entity similarity:   0.0833
+  Combined score:      0.2034
+  Shared entities:     ['trump']
+  Decision: NO MATCH (< 0.55)
+
+[45/46]
+
+----------------------------------------------------------------------
+Article 46: Actor Peter Cullen, voice of Optimus Prime and Eeyore, dies aged 85
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.1515
+  Entity similarity:   0.0000
+  Combined score:      0.1137
+  Shared entities:     none
+  Decision: NO MATCH (< 0.55)
+
+[46/46]
+
+----------------------------------------------------------------------
+Article 62: Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+Best story: 1
+  Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+  Semantic similarity: 0.9127
+  Entity similarity:   0.3750
+  Combined score:      0.7782
+  Shared entities:     ['australia', 'australians', 'nepal']
+  Decision: MATCH (>= 0.70)
+
+======================================================================
+SUMMARY
+======================================================================
+Articles processed:   46
+Matched:              5
+Possible:              7
+Unmatched:            34
+Failed:               0
+
+DRY RUN: database was NOT modified.
