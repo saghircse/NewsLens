@@ -1,6 +1,9 @@
 import argparse
 import ast
+import re
+
 import numpy as np
+from difflib import SequenceMatcher
 from psycopg.rows import dict_row
 
 from database.connection import get_connection
@@ -11,8 +14,9 @@ from nlp.entities import extract_normalized_entities
 # Configuration
 # ============================================================
 
-SEMANTIC_WEIGHT = 0.75
-ENTITY_WEIGHT = 0.25
+SEMANTIC_WEIGHT = 0.65
+ENTITY_WEIGHT = 0.15
+TITLE_WEIGHT = 0.20
 
 # Conservative threshold for automatically assigning an article
 # to an existing story.
@@ -21,6 +25,13 @@ MATCH_THRESHOLD = 0.70
 # Minimum threshold at which we display a possible match during
 # dry-run diagnostics.
 POSSIBLE_THRESHOLD = 0.55
+
+# Exact title match is considered a deterministic match.
+EXACT_TITLE_MATCH_SCORE = 1.0
+
+# Near-exact title similarity is useful, but we do not automatically
+# force a match solely because titles are similar.
+NEAR_EXACT_TITLE_THRESHOLD = 0.95
 
 
 # ============================================================
@@ -54,6 +65,7 @@ def parse_embedding(value):
         try:
             parsed = ast.literal_eval(value)
             return np.array(parsed, dtype=float)
+
         except (ValueError, SyntaxError):
             # Fallback for pgvector-style strings without spaces.
             value = value.strip("[]")
@@ -117,25 +129,117 @@ def entity_similarity(article_entities, story_entities):
 
 
 # ============================================================
+# Title normalization
+# ============================================================
+
+def normalize_title(title):
+    """
+    Normalize a title for comparison.
+
+    The purpose is to make titles such as:
+
+        "India Approves Major Investment!"
+        "india approves major investment"
+
+    comparable.
+
+    This is intentionally conservative. We do not remove
+    meaningful words from the title.
+    """
+
+    if not title:
+        return ""
+
+    title = title.lower().strip()
+
+    # Normalize apostrophes.
+    title = title.replace("’", "'")
+
+    # Remove possessive "'s".
+    title = re.sub(r"'s\b", "", title)
+
+    # Replace punctuation with spaces.
+    title = re.sub(r"[^a-z0-9\s]", " ", title)
+
+    # Collapse repeated whitespace.
+    title = re.sub(r"\s+", " ", title)
+
+    return title.strip()
+
+
+# ============================================================
+# Title similarity
+# ============================================================
+
+def title_similarity(article_title, story_title):
+    """
+    Calculate title similarity using two complementary signals:
+
+    1. Sequence similarity
+       Measures how similar the overall title strings are.
+
+    2. Token Jaccard similarity
+       Measures overlap between meaningful title words.
+
+    The final score is the average of both.
+    """
+
+    article_title = normalize_title(article_title)
+    story_title = normalize_title(story_title)
+
+    if not article_title or not story_title:
+        return 0.0
+
+    # Exact normalized title match.
+    if article_title == story_title:
+        return EXACT_TITLE_MATCH_SCORE
+
+    sequence_score = SequenceMatcher(
+        None,
+        article_title,
+        story_title,
+    ).ratio()
+
+    article_tokens = set(article_title.split())
+    story_tokens = set(story_title.split())
+
+    if not article_tokens or not story_tokens:
+        token_score = 0.0
+    else:
+        intersection = article_tokens.intersection(story_tokens)
+        union = article_tokens.union(story_tokens)
+
+        token_score = len(intersection) / len(union)
+
+    return float(
+        0.5 * sequence_score
+        + 0.5 * token_score
+    )
+
+
+# ============================================================
 # Combined score
 # ============================================================
 
 def calculate_combined_score(
     semantic_score,
     entity_score,
+    title_score,
 ):
     """
     Combined NewsLens story matching score.
 
-    Stage 7.9 formula:
+    Stage 7.10 formula:
 
-        75% semantic similarity
-        25% entity similarity
+        65% semantic similarity
+        15% entity similarity
+        20% title similarity
     """
 
     return (
         SEMANTIC_WEIGHT * semantic_score
         + ENTITY_WEIGHT * entity_score
+        + TITLE_WEIGHT * title_score
     )
 
 
@@ -238,7 +342,7 @@ def build_story_text(story):
 
 
 # ============================================================
-# Matching
+# Story preparation
 # ============================================================
 
 def prepare_story_data(stories):
@@ -258,9 +362,14 @@ def prepare_story_data(stories):
 
         entities = extract_normalized_entities(text)
 
+        normalized_title = normalize_title(
+            story["title"]
+        )
+
         prepared.append({
             "id": story["id"],
             "title": story["title"],
+            "normalized_title": normalized_title,
             "embedding": embedding,
             "entities": entities,
         })
@@ -268,10 +377,23 @@ def prepare_story_data(stories):
     return prepared
 
 
+# ============================================================
+# Matching
+# ============================================================
+
 def find_best_story(article, stories):
     """
     Compare one article against all stories and return the
     highest-scoring story.
+
+    Matching signals:
+
+        - Semantic similarity
+        - Entity similarity
+        - Title similarity
+
+    Exact normalized title matches are treated as deterministic
+    matches.
     """
 
     article_embedding = parse_embedding(
@@ -284,9 +406,59 @@ def find_best_story(article, stories):
         article_text
     )
 
+    article_normalized_title = normalize_title(
+        article["title"]
+    )
+
     candidates = []
 
     for story in stories:
+
+        # ----------------------------------------------------
+        # Exact title match
+        # ----------------------------------------------------
+
+        if (
+            article_normalized_title
+            and article_normalized_title
+            == story["normalized_title"]
+        ):
+            semantic_score = cosine_similarity(
+                article_embedding,
+                story["embedding"],
+            )
+
+            entity_score = entity_similarity(
+                article_entities,
+                story["entities"],
+            )
+
+            title_score = EXACT_TITLE_MATCH_SCORE
+
+            combined_score = EXACT_TITLE_MATCH_SCORE
+
+            shared_entities = sorted(
+                article_entities.intersection(
+                    story["entities"]
+                )
+            )
+
+            candidates.append({
+                "story_id": story["id"],
+                "story_title": story["title"],
+                "semantic_score": semantic_score,
+                "entity_score": entity_score,
+                "title_score": title_score,
+                "combined_score": combined_score,
+                "shared_entities": shared_entities,
+                "exact_title_match": True,
+            })
+
+            continue
+
+        # ----------------------------------------------------
+        # Normal weighted matching
+        # ----------------------------------------------------
 
         semantic_score = cosine_similarity(
             article_embedding,
@@ -298,9 +470,15 @@ def find_best_story(article, stories):
             story["entities"],
         )
 
+        title_score = title_similarity(
+            article["title"],
+            story["title"],
+        )
+
         combined_score = calculate_combined_score(
             semantic_score,
             entity_score,
+            title_score,
         )
 
         shared_entities = sorted(
@@ -314,8 +492,10 @@ def find_best_story(article, stories):
             "story_title": story["title"],
             "semantic_score": semantic_score,
             "entity_score": entity_score,
+            "title_score": title_score,
             "combined_score": combined_score,
             "shared_entities": shared_entities,
+            "exact_title_match": False,
         })
 
     candidates.sort(
@@ -425,9 +605,23 @@ def print_match(article, result):
     )
 
     print(
+        f"  Title similarity:    "
+        f"{result['title_score']:.4f}"
+    )
+
+    print(
         f"  Combined score:      "
         f"{result['combined_score']:.4f}"
     )
+
+    if result.get("exact_title_match"):
+        print(
+            "  Exact title match:   YES"
+        )
+    else:
+        print(
+            "  Exact title match:   NO"
+        )
 
     if result["shared_entities"]:
         print(
@@ -583,7 +777,24 @@ def main():
     )
 
     print(
+        f"Title weight:    {TITLE_WEIGHT:.2f}"
+    )
+
+    print(
         f"Match threshold: {MATCH_THRESHOLD:.2f}"
+    )
+
+    print(
+        f"Possible threshold: {POSSIBLE_THRESHOLD:.2f}"
+    )
+
+    print(
+        f"Exact title score: {EXACT_TITLE_MATCH_SCORE:.2f}"
+    )
+
+    print(
+        f"Near-exact title threshold: "
+        f"{NEAR_EXACT_TITLE_THRESHOLD:.2f}"
     )
 
     matched_count = 0
@@ -593,7 +804,10 @@ def main():
 
     persisted_count = 0
 
-    for index, article in enumerate(articles, start=1):
+    for index, article in enumerate(
+        articles,
+        start=1,
+    ):
 
         try:
 
@@ -670,7 +884,7 @@ def main():
     )
 
     print(
-        f"Possible:              {possible_count}"
+        f"Possible:             {possible_count}"
     )
 
     print(
