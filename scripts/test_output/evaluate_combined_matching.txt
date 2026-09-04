@@ -1,0 +1,260 @@
+Loading articles...
+Loaded 12 article-story mappings.
+
+Extracting entities from articles...
+
+Extracting entities...
+Loading spaCy model...
+spaCy model loaded.
+Processed 1/12: article 8
+Processed 2/12: article 9
+Processed 3/12: article 13
+Processed 4/12: article 15
+Processed 5/12: article 16
+Processed 6/12: article 17
+Processed 7/12: article 20
+Processed 8/12: article 32
+Processed 9/12: article 33
+Processed 10/12: article 34
+Processed 11/12: article 35
+Processed 12/12: article 62
+Entity extraction complete.
+
+Evaluating article pairs...
+
+
+======================================================================
+MATCHING STATISTICS
+======================================================================
+
+Same-story pairs: 25
+Different-story pairs: 41
+
+--- SEMANTIC SIMILARITY ---
+Same-story average: 0.7510
+Different-story average: 0.4175
+
+--- ENTITY SIMILARITY ---
+Same-story average: 0.2714
+Different-story average: 0.0684
+
+--- COMBINED SCORE ---
+Same-story average: 0.6311
+Different-story average: 0.3303
+
+--- THRESHOLD ANALYSIS ---
+
+Semantic only
+Threshold: 0.70
+True positives: 18
+False positives: 3
+False negatives: 7
+True negatives: 38
+Accuracy: 0.8485
+Precision: 0.8571
+Recall: 0.7200
+
+Semantic + entities
+Threshold: 0.70
+True positives: 5
+False positives: 0
+False negatives: 20
+True negatives: 41
+Accuracy: 0.6970
+Precision: 1.0000
+Recall: 0.2000
+
+
+======================================================================
+INTERESTING SAME-STORY PAIRS
+======================================================================
+
+----------------------------------------
+Article 15: Girl, 13, among missing British citizens after flash flood in Nepal
+Article 33: Climate crisis could be destabilising mountain areas like Nepal, experts warn
+Story ID: 2
+Semantic: 0.5746
+Entity: 0.2842
+Combined: 0.5020
+Shared entities: ['nepal', 'nepal-tibet', 'tibet']
+
+----------------------------------------
+Article 8: How to lose Trump’s trade war: test Canada’s resolve with threats to hockey sticks
+Article 9: Wiped out: US faces surging toilet paper prices amid trade war with Canada
+Story ID: 3
+Semantic: 0.6584
+Entity: 0.1565
+Combined: 0.5329
+Shared entities: ['canada', 'united states']
+
+----------------------------------------
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Article 62: Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+Story ID: 1
+Semantic: 0.6753
+Entity: 0.1356
+Combined: 0.5403
+Shared entities: ['australians', 'nepal']
+
+----------------------------------------
+Article 13: Nearly 1,400 missing, mostly tourists, after Nepal-Tibet flash flood kills at least 356
+Article 33: Climate crisis could be destabilising mountain areas like Nepal, experts warn
+Story ID: 2
+Semantic: 0.6346
+Entity: 0.3034
+Combined: 0.5518
+Shared entities: ['nepal', 'nepal-tibet', 'tibet']
+
+----------------------------------------
+Article 15: Girl, 13, among missing British citizens after flash flood in Nepal
+Article 32: Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+Story ID: 2
+Semantic: 0.6959
+Entity: 0.1402
+Combined: 0.5570
+Shared entities: ['nepal', 'tibetan']
+
+----------------------------------------
+Article 33: Climate crisis could be destabilising mountain areas like Nepal, experts warn
+Article 35: Search is on for at least 33 Britons missing after flash floods in Nepal and Tibet
+Story ID: 2
+Semantic: 0.6182
+Entity: 0.3857
+Combined: 0.5601
+Shared entities: ['nepal', 'nepal-tibet', 'tibet']
+
+----------------------------------------
+Article 32: Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+Article 35: Search is on for at least 33 Britons missing after flash floods in Nepal and Tibet
+Story ID: 2
+Semantic: 0.7393
+Entity: 0.1023
+Combined: 0.5800
+Shared entities: ['nepal']
+
+----------------------------------------
+Article 32: Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+Article 33: Climate crisis could be destabilising mountain areas like Nepal, experts warn
+Story ID: 2
+Semantic: 0.7810
+Entity: 0.1139
+Combined: 0.6142
+Shared entities: ['nepal']
+
+----------------------------------------
+Article 17: Australian officials ‘working around the clock’ to check welfare of tourists missing in Nepal
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Story ID: 1
+Semantic: 0.7870
+Entity: 0.1260
+Combined: 0.6217
+Shared entities: ['australians', 'nepal']
+
+----------------------------------------
+Article 13: Nearly 1,400 missing, mostly tourists, after Nepal-Tibet flash flood kills at least 356
+Article 34: Race to get aid into Nepal and Tibet amid warnings flood lake could burst
+Story ID: 2
+Semantic: 0.7210
+Entity: 0.3293
+Combined: 0.6230
+Shared entities: ['nepal', 'nepal-tibet', 'tibet']
+
+
+======================================================================
+INTERESTING DIFFERENT-STORY PAIRS
+======================================================================
+
+----------------------------------------
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Article 35: Search is on for at least 33 Britons missing after flash floods in Nepal and Tibet
+Stories: 1 vs 2
+Semantic: 0.7116
+Entity: 0.1759
+Combined: 0.5777
+Shared entities: ['nepal', 'tibet']
+
+----------------------------------------
+Article 13: Nearly 1,400 missing, mostly tourists, after Nepal-Tibet flash flood kills at least 356
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Stories: 2 vs 1
+Semantic: 0.7196
+Entity: 0.1496
+Combined: 0.5771
+Shared entities: ['nepal', 'tibet']
+
+----------------------------------------
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Article 34: Race to get aid into Nepal and Tibet amid warnings flood lake could burst
+Stories: 1 vs 2
+Semantic: 0.6888
+Entity: 0.2065
+Combined: 0.5682
+Shared entities: ['nepal', 'tibet']
+
+----------------------------------------
+Article 16: Flash floods on Nepal-Tibet border leave scores dead and hundreds missing
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Stories: 2 vs 1
+Semantic: 0.6535
+Entity: 0.2887
+Combined: 0.5623
+Shared entities: ['china', 'nepal', 'tibet']
+
+----------------------------------------
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Article 32: Nepal flash flood: death toll nears 400 amid warning of fresh danger from rising lake water – latest updates
+Stories: 1 vs 2
+Semantic: 0.7095
+Entity: 0.0926
+Combined: 0.5553
+Shared entities: ['nepal']
+
+----------------------------------------
+Article 15: Girl, 13, among missing British citizens after flash flood in Nepal
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Stories: 2 vs 1
+Semantic: 0.6860
+Entity: 0.1429
+Combined: 0.5502
+Shared entities: ['nepal', 'tibet']
+
+----------------------------------------
+Article 17: Australian officials ‘working around the clock’ to check welfare of tourists missing in Nepal
+Article 35: Search is on for at least 33 Britons missing after flash floods in Nepal and Tibet
+Stories: 1 vs 2
+Semantic: 0.6946
+Entity: 0.0796
+Combined: 0.5408
+Shared entities: ['nepal']
+
+----------------------------------------
+Article 20: Nepal floods: children as young as 11 among 39 Australians missing after disaster
+Article 33: Climate crisis could be destabilising mountain areas like Nepal, experts warn
+Stories: 1 vs 2
+Semantic: 0.6396
+Entity: 0.1919
+Combined: 0.5277
+Shared entities: ['nepal', 'tibet']
+
+----------------------------------------
+Article 13: Nearly 1,400 missing, mostly tourists, after Nepal-Tibet flash flood kills at least 356
+Article 17: Australian officials ‘working around the clock’ to check welfare of tourists missing in Nepal
+Stories: 2 vs 1
+Semantic: 0.6442
+Entity: 0.0682
+Combined: 0.5002
+Shared entities: ['nepal']
+
+----------------------------------------
+Article 35: Search is on for at least 33 Britons missing after flash floods in Nepal and Tibet
+Article 62: Australia news live: number of Australians missing in Nepal increases to 39; voluntary assisted dying laws passed in NT
+Stories: 2 vs 1
+Semantic: 0.6242
+Entity: 0.0865
+Combined: 0.4898
+Shared entities: ['nepal']
+
+
+======================================================================
+EVALUATION COMPLETE
+======================================================================
